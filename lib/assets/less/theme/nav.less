@@ -1,0 +1,93 @@
+// Variables
+// ========================================================================
+
+@nav-header-font-size:                          14px;
+@nav-subtitle-line-height:                      18px;
+
+
+@nav-side-color:                                @dark-grey;
+@nav-side-hover-background:                     rgba(0,0,0,0.05);
+@nav-side-hover-color:                          @dark-grey;
+@nav-side-active-background:                    @primary-color;
+@nav-side-active-color:                         @white;
+@nav-side-header-color:                         @dark-grey;
+@nav-side-divider-border:                       @light-grey;
+@nav-side-divider-border-width:                 1px;
+@nav-side-nested-color:                         @primary-color;
+@nav-side-nested-hover-color:                   @secondary-color;
+
+@nav-dropdown-color:                            @dark-grey;
+@nav-dropdown-hover-background:                 @primary-color;
+@nav-dropdown-hover-color:                      @white;
+@nav-dropdown-header-color:                     @medium-light-grey;
+@nav-dropdown-divider-border:                   @light-grey;
+@nav-dropdown-divider-border-width:             1px;
+@nav-dropdown-nested-color:                     @primary-color;
+@nav-dropdown-nested-hover-color:               @secondary-color;
+
+@nav-navbar-color:                              @dark-grey;
+@nav-navbar-hover-background:                   @primary-color;
+@nav-navbar-hover-color:                        @white;
+@nav-navbar-header-color:                       @medium-light-grey;
+@nav-navbar-divider-border:                     @light-grey;
+@nav-navbar-nested-color:                       @primary-color;
+@nav-navbar-nested-hover-color:                 @secondary-color;
+
+@nav-offcanvas-color:                           @white;
+@nav-offcanvas-hover-background:                @primary-color;
+@nav-offcanvas-hover-color:                     @white;
+@nav-offcanvas-active-background:               @primary-color;
+@nav-offcanvas-active-color:                    @white;
+@nav-offcanvas-header-color:                    @medium-grey;
+@nav-offcanvas-divider-border:                  @light-grey;
+@nav-offcanvas-nested-color:                    @light-grey;
+@nav-offcanvas-nested-hover-color:              @white;
+
+/*--------------------------------------------------------------
+Header nav
+--------------------------------------------------------------*/
+.tm-header, .pp-primary-nav {
+    .uk-navbar-nav > li > a {
+        color: @global-color;
+        font-size: @nav-header-font-size;
+        text-transform: uppercase;
+        font-family: @base-heading-font-family;
+        &:hover{
+            color:@primary-color;
+        }
+
+    }
+    &.uk-active {
+        .uk-navbar-nav > li > a {
+            color: @global-color;
+            &:hover{
+                color: @primary-color;
+            }
+        }
+    }
+    .sub-menu > li > a{
+        font-family: @base-heading-font-family;
+        letter-spacing: 1px;
+    }
+}
+
+.tm-primary-menu{
+    .uk-dropdown{
+        top:32px !important;
+    }
+}
+
+.pp-primary-nav {
+    background: @white;
+    padding: 15px 0;
+    text-transform: uppercase;
+}
+
+// Hooks
+// ========================================================================
+
+.hook-nav-misc;
+
+.hook-nav-dropdown() {
+    font-size: 13px;
+}
