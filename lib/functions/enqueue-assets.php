@@ -39,7 +39,6 @@ function poo_enqueue_styles() {
 		CHILD_LIB . '/assets/less/core/overlay.less',
 		CHILD_LIB . '/assets/less/core/variables.less',
 		CHILD_LIB . '/assets/less/layout/default.less',
-		CHILD_LIB . '/assets/less/layout/social.less',
 		CHILD_LIB . '/assets/less/layout/content.less',
 		CHILD_LIB . '/assets/less/layout/header.less',
 		CHILD_LIB . '/assets/less/layout/footer.less',
@@ -60,29 +59,15 @@ beans_add_smart_action( 'beans_uikit_enqueue_scripts', 'poo_enqueue_uikit_assets
  */
 function poo_enqueue_uikit_assets() {
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_LIB . '/assets/js/animatedtext.js',
 		CHILD_LIB . '/assets/js/theme.js'
 	), 'js' );
 
 	beans_uikit_enqueue_components( array(
-		'contrast',
 		'cover',
-		'animation',
-		'modal',
 		'overlay',
-		'column',
-		'switcher',
-		'scrollspy'
 	) );
 	beans_uikit_enqueue_components( array(
-		'sticky',
-		'slideshow',
-		'slider',
-		'lightbox',
 		'grid',
-		'parallax',
-		'dotnav',
-		'slidenav'
 	),
 		'add-ons' );
 
@@ -98,5 +83,5 @@ add_action( 'wp_enqueue_scripts', 'poo_add_google_fonts' );
  * @return void
  */
 function poo_add_google_fonts() {
-	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Raleway:300,400,600', false );
+	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Francois+One|Open+Sans', false );
 }

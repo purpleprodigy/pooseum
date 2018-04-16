@@ -22,8 +22,8 @@ function poo_set_up_child_theme() {
 function poo_add_new_image_sizes() {
 	$config = array(
 		'featured-image' => array(
-			'width'  => 720,
-			'height' => 400,
+			'width'  => 450,
+			'height' => 300,
 			'crop'   => true,
 		),
 	);

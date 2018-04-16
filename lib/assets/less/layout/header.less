@@ -11,6 +11,14 @@ Header
       color: @global-color;
     }
   }
+  @media (max-width: 768px) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+  }
 }
 
 .tm-header-wrapper {
@@ -29,8 +37,13 @@ Header
     border-bottom: 1px solid @primary-color;
     font-size: 20px;
     letter-spacing: 2px;
-
   }
+}
+
+.poo-tagline {
+  font-family: @base-heading-font-family;
+  font-size: 24px;
+  color: @dark-grey !important;
 }
 
 /*-----------------------------------------------------------
@@ -84,10 +97,23 @@ Header
   float: right;
   text-align: right;
   line-height: 1.8;
-  .uk-icon-phone, .uk-icon-map-marker {
-    margin-right: 8px;
-    font-size: 22px;
+  .uk-icon-calendar, .uk-icon-map-marker, .uk-icon-map {
+    margin-right: 10px;
+    font-size: 20px;
     position: relative;
-    top:1px;
+    top: 1px;
+    color: @primary-color;
+  }
+  @media (max-width: @breakpoint-medium) {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+
+.poo-opening-hours {
+  margin: 20px 0;
+  @media (max-width: @breakpoint-medium) {
+    display: none;
   }
 }

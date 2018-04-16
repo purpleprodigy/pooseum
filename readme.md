@@ -1,6 +1,6 @@
 # Pooseum Child Theme built on Beans
 
-This is a child theme for the Beans framework by Purple Prodigy.
+This is a child theme built on the Beans framework by Purple Prodigy.
 
 # Features
 
@@ -13,7 +13,7 @@ This theme includes the following features:
 This child theme requires the following dependencies:
 
 - [Beans](https://getbeans.io)
-- WordPress
+- [WordPress](https://wordpress.org)
 
 # Installation
 

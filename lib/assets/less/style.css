@@ -226,8 +226,8 @@ h4,
 h5,
 h6 {
   margin: 0 0 25px 0;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-family: 'Francois One', sans-serif;
+  font-weight: 400;
   color: #444;
   text-transform: none;
   color: #E96A23;
@@ -1557,7 +1557,7 @@ iframe {
  * Vertical gutter for articles
  */
 .uk-article + .uk-article {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 /* Sub-object `uk-article-title`
  ========================================================================== */
@@ -1761,7 +1761,7 @@ iframe {
   padding: 5px 15px;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 18px;
 }
 .uk-nav-header:not(:first-child) {
   margin-top: 15px;
@@ -3233,7 +3233,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 5 */
   font-size: 18px;
   line-height: 30px;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif !important;
+  font-family: 'Francois One', sans-serif !important;
   font-size: 16px;
 }
 /*
@@ -3784,7 +3784,7 @@ select.uk-form-width-mini {
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  background: #eee;
+  background: #E96A23;
   line-height: 35px;
   color: #444;
   font-size: 18px;
@@ -3797,14 +3797,14 @@ select.uk-form-width-mini {
  */
 .uk-icon-button:hover,
 .uk-icon-button:focus {
-  background-color: #f5f5f5;
+  background-color: #444;
   color: #444;
   /* 2 */
   outline: none;
 }
 /* Active */
 .uk-icon-button:active {
-  background-color: #ddd;
+  background-color: #ededed;
   color: #444;
 }
 /* Icon mapping
@@ -5844,13 +5844,6 @@ select.uk-form-width-mini {
   text-align: center;
   vertical-align: middle;
   opacity: 0.3;
-  background: #000;
-  opacity: 1;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 /* Icon */
 .uk-close:after {
@@ -5877,12 +5870,9 @@ select.uk-form-width-mini {
 /* Modifier
  ========================================================================== */
 .uk-close-alt {
-  padding: 0;
+  padding: 2px;
   border-radius: 50%;
   background: #eee;
-  width: 26px;
-  line-height: 26px !important;
-  border-radius: 13px;
   opacity: 1;
 }
 /* Hover */
@@ -5898,36 +5888,13 @@ select.uk-form-width-mini {
 .uk-close-alt:focus:after {
   opacity: 0.8;
 }
-.uk-close::after {
-  content: '\e117';
-  font-size: 10px;
-}
-.uk-close:hover,
-.uk-close:focus {
-  opacity: 0.7;
-}
-.uk-close-alt:hover {
-  background: #E96A23;
-}
-.uk-close-alt:hover,
-.uk-close-alt:focus {
-  opacity: 1;
-}
-.uk-close-alt::after {
-  color: #fff;
-  opacity: 1;
-}
-.uk-close-alt:hover::after {
-  color: #fff;
-  opacity: 1;
-}
 /* ========================================================================
    Component: Badge
  ========================================================================== */
 .uk-badge {
   display: inline-block;
   padding: 0 5px;
-  background: #E96A23;
+  background: #00a8e6;
   font-size: 10px;
   font-weight: bold;
   line-height: 14px;
@@ -6156,7 +6123,7 @@ a.uk-thumbnail:focus {
   left: 0;
   right: 0;
   /* 2 */
-  padding: 10px;
+  padding: 20px;
   color: #fff;
 }
 /*
@@ -6179,7 +6146,7 @@ a.uk-thumbnail:focus {
 }
 .uk-overlay-panel a:not([class]) {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .uk-overlay-panel a[class*='uk-icon-']:not(.uk-icon-button) {
   color: inherit;
@@ -7613,7 +7580,7 @@ a.uk-thumbnail:focus {
   /* 4 */
   background: rgba(0, 0, 0, 0.1);
   font-weight: 300;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Francois One', sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -8875,378 +8842,11 @@ a.uk-thumbnail:focus {
 :not(pre) > samp {
   white-space: normal;
 }
-/* ========================================================================
-   Component: Overlay
- ========================================================================== */
-/*
- * 1. Container width fits its content
- * 2. Create position context
- * 3. Set max-width for responsive images to prevent `inline-block` consequences
- * 4. Remove the gap between the container and its child element
- * 5. Needed for transitions and to fixed wrong scaling calculation for images in Chrome
- * 6. Fixed `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
- * 7. Reset margin
- */
 .uk-overlay {
-  /* 1 */
-  display: inline-block;
-  /* 2 */
-  position: relative;
-  /* 3 */
-  max-width: 100%;
-  /* 4 */
-  vertical-align: middle;
-  /* 5 */
-  overflow: hidden;
-  /* 6 */
-  -webkit-transform: translateZ(0);
-  /* 7 */
-  margin: 0;
-}
-/* 6 for Safari */
-.uk-overlay.uk-border-circle {
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-}
-/*
- * Remove margin from content
- */
-.uk-overlay > :first-child {
-  margin-bottom: 0;
-}
-/* Sub-object `uk-overlay-panel`
- ========================================================================== */
-/*
- * 1. Position cover
- * 2. Style
- */
-.uk-overlay-panel {
-  /* 1 */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* 2 */
-  padding: 10px;
-  color: #fff;
-}
-/*
- * Remove margin from the last-child
- */
-.uk-overlay-panel > :last-child,
-.uk-overlay-panel.uk-flex > * > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Keep color for headings if the default heading color is changed
- */
-.uk-overlay-panel h1,
-.uk-overlay-panel h2,
-.uk-overlay-panel h3,
-.uk-overlay-panel h4,
-.uk-overlay-panel h5,
-.uk-overlay-panel h6 {
-  color: inherit;
-}
-.uk-overlay-panel a:not([class]) {
-  color: inherit;
-  text-decoration: none;
-}
-.uk-overlay-panel a[class*='uk-icon-']:not(.uk-icon-button) {
-  color: inherit;
-}
-/* Sub-object `uk-overlay-hover` and `uk-overlay-active`
- ========================================================================== */
-.uk-overlay-hover:not(:hover):not(.uk-hover) .uk-overlay-panel:not(.uk-ignore) {
-  opacity: 0;
-}
-.uk-overlay-active :not(.uk-active) > .uk-overlay-panel:not(.uk-ignore) {
-  opacity: 0;
-}
-/* Modifier `uk-overlay-background`
- ========================================================================== */
-.uk-overlay-background {
-  background: rgba(0, 0, 0, 0.5);
-}
-/* Modifier `uk-overlay-image`
- ========================================================================== */
-/*
- * Reset panel
- */
-.uk-overlay-image {
-  padding: 0;
-}
-/* Position modifiers
- ========================================================================== */
-.uk-overlay-top {
-  bottom: auto;
-}
-.uk-overlay-bottom {
-  top: auto;
-}
-.uk-overlay-left {
-  right: auto;
-}
-.uk-overlay-right {
-  left: auto;
-}
-/* Sub-object `uk-overlay-icon`
- ========================================================================== */
-.uk-overlay-icon:before {
-  content: "\f002";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  margin-left: -25px;
-  font-size: 50px;
-  line-height: 1;
-  font-family: FontAwesome;
-  text-align: center;
-  color: #fff;
-}
-/* Transitions
- ========================================================================== */
-.uk-overlay-fade,
-.uk-overlay-scale,
-.uk-overlay-spin,
-.uk-overlay-grayscale,
-.uk-overlay-blur,
-[class*='uk-overlay-slide'] {
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  transition-property: opacity, transform, filter;
-}
-.uk-overlay-active .uk-overlay-fade,
-.uk-overlay-active .uk-overlay-scale,
-.uk-overlay-active .uk-overlay-spin,
-.uk-overlay-active [class*='uk-overlay-slide'] {
-  transition-duration: 0.8s;
-}
-/*
- * Fade
- */
-.uk-overlay-fade {
-  opacity: 0.7;
-}
-.uk-overlay-hover:hover .uk-overlay-fade,
-.uk-overlay-hover.uk-hover .uk-overlay-fade,
-.uk-overlay-active .uk-active > .uk-overlay-fade {
-  opacity: 1;
-}
-/*
- * Scale
- */
-.uk-overlay-scale {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-.uk-overlay-hover:hover .uk-overlay-scale,
-.uk-overlay-hover.uk-hover .uk-overlay-scale,
-.uk-overlay-active .uk-active > .uk-overlay-scale {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-/*
- * Spin
- */
-.uk-overlay-spin {
-  -webkit-transform: scale(1) rotate(0deg);
-  transform: scale(1) rotate(0deg);
-}
-.uk-overlay-hover:hover .uk-overlay-spin,
-.uk-overlay-hover.uk-hover .uk-overlay-spin,
-.uk-overlay-active .uk-active > .uk-overlay-spin {
-  -webkit-transform: scale(1.1) rotate(3deg);
-  transform: scale(1.1) rotate(3deg);
-}
-/*
- * Grayscale
- */
-.uk-overlay-grayscale {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.uk-overlay-hover:hover .uk-overlay-grayscale,
-.uk-overlay-hover.uk-hover .uk-overlay-grayscale,
-.uk-overlay-active .uk-active > .uk-overlay-grayscale {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-}
-/*
- * Slide
- */
-[class*='uk-overlay-slide'] {
-  opacity: 0;
-}
-/* Top */
-.uk-overlay-slide-top {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-/* Bottom */
-.uk-overlay-slide-bottom {
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-}
-/* Left */
-.uk-overlay-slide-left {
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-/* Right */
-.uk-overlay-slide-right {
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-}
-/* Hover */
-.uk-overlay-hover:hover [class*='uk-overlay-slide'],
-.uk-overlay-hover.uk-hover [class*='uk-overlay-slide'],
-.uk-overlay-active .uk-active > [class*='uk-overlay-slide'] {
-  opacity: 1;
-  -webkit-transform: translateX(0) translateY(0);
-  transform: translateX(0) translateY(0);
-}
-/* DEPRECATED
- * Sub-object `uk-overlay-area`
- ========================================================================== */
-/*
- * 1. Set position
- * 2. Set style
- * 3. Fade-in transition
- */
-.uk-overlay-area {
-  /* 1 */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* 2 */
-  background: rgba(0, 0, 0, 0.3);
-  /* 3 */
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-/*
- * Hover
- * 1. `uk-hover` to support touch devices
- * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
- */
-.uk-overlay:hover .uk-overlay-area,
-.uk-overlay.uk-hover .uk-overlay-area,
-.uk-overlay-toggle:hover .uk-overlay-area,
-.uk-overlay-toggle.uk-hover .uk-overlay-area {
-  opacity: 1;
-}
-/*
- * Icon
- */
-.uk-overlay-area:empty:before {
-  content: "\f002";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  margin-left: -25px;
-  font-size: 50px;
-  line-height: 1;
-  font-family: FontAwesome;
-  text-align: center;
-  color: #fff;
-}
-/* DEPRECATED
- * Sub-object `uk-overlay-area-content`
- ========================================================================== */
-/*
- * Remove whitespace between child elements when using `inline-block`
- * Needed for Firefox
- */
-.uk-overlay-area:not(:empty) {
-  font-size: 0.001px;
-}
-/*
- * 1. Needed for vertical alignment
- */
-.uk-overlay-area:not(:empty):before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-/*
- * 1. Set vertical alignment
- * 2. Reset whitespace hack
- * 3. Set horizontal alignment
- * 4. Set style
- */
-.uk-overlay-area-content {
-  /* 1 */
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
-  vertical-align: middle;
-  /* 2 */
-  font-size: 1rem;
-  /* 3 */
-  text-align: center;
-  /* 4 */
-  padding: 0 15px;
-  color: #fff;
-}
-/*
- * Remove margin from the last-child
- */
-.uk-overlay-area-content > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Links in overlay area
- */
-.uk-overlay-area-content a:not([class]),
-.uk-overlay-area-content a:not([class]):hover {
-  color: inherit;
-}
-/* DEPRECATED
- * Sub-object `uk-overlay-caption`
- ========================================================================== */
-/*
- * 1. Set position
- * 2. Set style
- * 3. Fade-in transition
- */
-.uk-overlay-caption {
-  /* 1 */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* 2 */
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  /* 3 */
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-/*
- * Hover
- * 1. `uk-hover` to support touch devices
- * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
- */
-.uk-overlay:hover .uk-overlay-caption,
-.uk-overlay.uk-hover .uk-overlay-caption,
-.uk-overlay-toggle:hover .uk-overlay-caption,
-.uk-overlay-toggle.uk-hover .uk-overlay-caption {
-  opacity: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  margin: 20px;
 }
 .tm-overlay-layla .uk-overlay > .uk-overlay-panel {
   padding: 25px;
@@ -9309,28 +8909,6 @@ a.uk-thumbnail:focus {
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-[class*='uk-animation-'] {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-/* Duration modifiers
-========================================================================== */
-.uk-animation-15 {
-  -webkit-animation-duration: 15s;
-  animation-duration: 15s;
-}
-.uk-animation-1 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
-.uk-animation-2 {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
 input[type="button"] {
   /* 1 */
   -webkit-appearance: none;
@@ -9373,7 +8951,7 @@ input[type="button"] {
   background-color: #E96A23;
   color: #fff;
   border: none;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif !important;
+  font-family: 'Francois One', sans-serif !important;
   color: #fff !important;
   font-weight: 300 !important;
   cursor: pointer;
@@ -9383,247 +8961,6 @@ input[type="button"]:hover {
   -webkit-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
-}
-/* Icon */
-.uk-close:after {
-  display: block;
-  content: "\e306";
-  font-family: 'icomoon' !important;
-}
-/* ========================================================================
-   Component: Dotnav
- ========================================================================== */
-/*
- * 1. Gutter
- * 2. Remove default list style
- */
-.uk-dotnav {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  /* 1 */
-  margin-left: -5px;
-  margin-top: -5px;
-  /* 2 */
-  padding: 0;
-  list-style: none;
-}
-/*
- * 1. Space is allocated solely based on content dimensions
- * 2. Horizontal gutter is using `padding` so `uk-width-*` classes can be applied
- */
-.uk-dotnav > * {
-  /* 1 */
-  -ms-flex: none;
-  -webkit-flex: none;
-  flex: none;
-  /* 2 */
-  padding-left: 5px;
-  margin-top: 5px;
-}
-/*
- * DEPRECATED IE9 Support
- */
-.uk-dotnav:before,
-.uk-dotnav:after {
-  content: "";
-  display: block;
-  overflow: hidden;
-}
-.uk-dotnav:after {
-  clear: both;
-}
-.uk-dotnav > * {
-  float: left;
-}
-/* Items
- ========================================================================== */
-/*
- * Items
- * 1. Hide text if present
- */
-.uk-dotnav > * > * {
-  display: block;
-  box-sizing: content-box;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(50, 50, 50, 0.1);
-  /* 1 */
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-/*
- * Hover
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- */
-.uk-dotnav > * > :hover,
-.uk-dotnav > * > :focus {
-  background: rgba(50, 50, 50, 0.4);
-  /* 2 */
-  outline: none;
-}
-/* OnClick */
-.uk-dotnav > * > :active {
-  background: rgba(50, 50, 50, 0.6);
-}
-/* Active */
-.uk-dotnav > .uk-active > * {
-  background: rgba(50, 50, 50, 0.4);
-}
-/* Modifier: `uk-dotnav-contrast`
- ========================================================================== */
-.uk-dotnav-contrast > * > * {
-  background: rgba(255, 255, 255, 0.4);
-}
-/*
- * Hover
- * 1. Apply hover style also to focus state
- */
-.uk-dotnav-contrast > * > :hover,
-.uk-dotnav-contrast > * > :focus {
-  background: rgba(255, 255, 255, 0.7);
-}
-/* OnClick */
-.uk-dotnav-contrast > * > :active {
-  background: rgba(255, 255, 255, 0.9);
-}
-/* Active */
-.uk-dotnav-contrast > .uk-active > * {
-  background: rgba(255, 255, 255, 0.9);
-}
-/* Modifier: 'uk-dotnav-vertical'
- ========================================================================== */
-/*
- * DEPRECATED
- */
-.uk-dotnav-vertical {
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-/*
- * DEPRECATED IE9 Support
- */
-.uk-dotnav-vertical > * {
-  float: none;
-}
-/* ========================================================================
-Component: Slidenav
-========================================================================== */
-/*
-* 1. Required for `a` elements
-* 2. Dimension
-* 3. Style
-*/
-.uk-slidenav {
-  /* 1 */
-  display: inline-block;
-  /* 2 */
-  box-sizing: border-box;
-  width: 30px;
-  height: 30px;
-  /* 3 */
-  line-height: 30px;
-  color: rgba(50, 50, 50, 0.4);
-  font-size: 40px;
-  text-align: center;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transform: scale(0.8);
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-/*
-* Hover
-* 1. Apply hover style also to focus state
-* 2. Remove default focus style
-* 3. Required for `a` elements
-* 4. Style
-*/
-.uk-slidenav:hover,
-.uk-slidenav:focus {
-  /* 2 */
-  outline: none;
-  /* 3 */
-  text-decoration: none;
-  /* 4 */
-  color: #fff;
-  cursor: pointer;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-/* Active */
-.uk-slidenav:active {
-  color: rgba(50, 50, 50, 0.9);
-}
-/*
-* Icons
-*/
-.uk-slidenav-previous:before {
-  content: "\f104";
-  font-family: FontAwesome;
-}
-.uk-slidenav-next:before {
-  content: "\f105";
-  font-family: FontAwesome;
-}
-/* Sub-object: `uk-slidenav-position`
-========================================================================== */
-/*
-* Create position context
-*/
-.uk-slidenav-position {
-  position: relative;
-}
-/*
-* Center vertically
-*/
-.uk-slidenav-position .uk-slidenav {
-  display: none;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  margin-top: -15px;
-}
-.uk-slidenav-position:hover .uk-slidenav {
-  display: block;
-}
-.uk-slidenav-position .uk-slidenav-previous {
-  left: 20px;
-}
-.uk-slidenav-position .uk-slidenav-next {
-  right: 20px;
-}
-/* Modifier: `uk-slidenav-contrast`
-========================================================================== */
-.uk-slidenav-contrast {
-  color: rgba(255, 255, 255, 0.5);
-}
-/*
-* Hover
-* 1. Apply hover style also to focus state
-*/
-.uk-slidenav-contrast:hover,
-.uk-slidenav-contrast:focus {
-  color: rgba(255, 255, 255, 0.7);
-}
-/* Active */
-.uk-slidenav-contrast:active {
-  color: rgba(255, 255, 255, 0.9);
 }
 /* ========================================================================
    Component: Form
@@ -9891,7 +9228,7 @@ input {
   /* 5 */
   font-size: 18px;
   line-height: 30px;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif !important;
+  font-family: 'Francois One', sans-serif !important;
   font-size: 16px;
 }
 /*
@@ -10114,68 +9451,6 @@ input {
   height: 40px;
 }
 /* ========================================================================
-   Component: Article
- ========================================================================== */
-/*
- * Micro clearfix to make articles more robust
- */
-.uk-article:before,
-.uk-article:after {
-  content: "";
-  display: table;
-}
-.uk-article:after {
-  clear: both;
-}
-/*
- * Remove margin from the last-child
- */
-.uk-article > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Vertical gutter for articles
- */
-.uk-article + .uk-article {
-  margin-top: 40px;
-}
-/* Sub-object `uk-article-title`
- ========================================================================== */
-.uk-article-title {
-  font-size: 36px;
-  line-height: 42px;
-  font-weight: normal;
-  text-transform: none;
-}
-.uk-article-title a {
-  color: inherit;
-  text-decoration: none;
-}
-/* Sub-object `uk-article-meta`
- ========================================================================== */
-.uk-article-meta {
-  font-size: 12px;
-  line-height: 18px;
-  color: #999;
-}
-/* Sub-object `uk-article-lead`
- ========================================================================== */
-.uk-article-lead {
-  color: #444;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: normal;
-}
-/* Sub-object `uk-article-divider`
- ========================================================================== */
-.uk-article-divider {
-  margin-bottom: 25px;
-  border-color: #ddd;
-}
-* + .uk-article-divider {
-  margin-top: 25px;
-}
-/* ========================================================================
    Component: Comment
  ========================================================================== */
 .uk-comment {
@@ -10253,69 +9528,28 @@ input {
 }
 /* Modifier `uk-comment-primary`
  ========================================================================== */
-/* ========================================================================
-   Component: Badge
- ========================================================================== */
-.uk-badge {
-  display: inline-block;
-  padding: 0 5px;
-  background: #E96A23;
-  font-size: 10px;
-  font-weight: bold;
-  line-height: 14px;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: none;
-}
-/*
- * Keep color when badge is a link
- */
-a.uk-badge:hover {
-  color: #fff;
-}
-/* Modifier: `uk-badge-notification`;
- ========================================================================== */
-.uk-badge-notification {
-  box-sizing: border-box;
-  min-width: 18px;
-  border-radius: 500px;
-  font-size: 12px;
-  line-height: 18px;
-}
-/* Color modifier
- ========================================================================== */
-/*
- * Modifier: `uk-badge-success`
- */
-.uk-badge-success {
-  background-color: #8cc14c;
-}
-/*
- * Modifier: `uk-badge-warning`
- */
-.uk-badge-warning {
-  background-color: #faa732;
-}
-/*
- * Modifier: `uk-badge-danger`
- */
-.uk-badge-danger {
-  background-color: #da314b;
-}
 /*--------------------------------------------------------------
 Header nav
 --------------------------------------------------------------*/
 .tm-header .uk-navbar-nav > li > a,
 .pp-primary-nav .uk-navbar-nav > li > a {
   color: #444;
-  font-size: 14px;
+  font-size: 18px;
   text-transform: uppercase;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Francois One', sans-serif;
 }
 .tm-header .uk-navbar-nav > li > a:hover,
 .pp-primary-nav .uk-navbar-nav > li > a:hover {
   color: #E96A23;
+  border-bottom: 2px solid;
+}
+@media (max-width: 768px) {
+  .tm-header .uk-navbar-nav > li > a,
+  .pp-primary-nav .uk-navbar-nav > li > a {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
 }
 .tm-header.uk-active .uk-navbar-nav > li > a,
 .pp-primary-nav.uk-active .uk-navbar-nav > li > a {
@@ -10327,7 +9561,7 @@ Header nav
 }
 .tm-header .sub-menu > li > a,
 .pp-primary-nav .sub-menu > li > a {
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Francois One', sans-serif;
   letter-spacing: 1px;
 }
 .tm-primary-menu .uk-dropdown {
@@ -10337,19 +9571,6 @@ Header nav
   background: #fff;
   padding: 15px 0;
   text-transform: uppercase;
-}
-.pp-social-menu {
-  padding: 20px 0;
-  background-color: #444;
-}
-.pp-social-menu ul li {
-  margin-left: 20px;
-}
-.pp-social-menu .uk-navbar-nav > li > a {
-  display: none;
-}
-.menu-social-container ul li a {
-  display: none;
 }
 /*--------------------------------------------------------------
 Site
@@ -10380,6 +9601,16 @@ Header
 .tm-header.uk-active .tm-site-branding a {
   color: #444;
 }
+@media (max-width: 768px) {
+  .tm-header {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column;
+  }
+}
 @media (min-width: 768px) {
   .tm-header-wrapper {
     border-bottom: 0 solid #fff;
@@ -10390,10 +9621,15 @@ Header
   font-weight: 400;
   color: #444;
   text-transform: uppercase;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Francois One', sans-serif;
   border-bottom: 1px solid #E96A23;
   font-size: 20px;
   letter-spacing: 2px;
+}
+.poo-tagline {
+  font-family: 'Francois One', sans-serif;
+  font-size: 24px;
+  color: #444 !important;
 }
 /*-----------------------------------------------------------
 	Above Header Widget
@@ -10411,7 +9647,7 @@ Header
 }
 .above-header-widget .tm-widget {
   color: #fff;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Francois One', sans-serif;
   font-weight: 300;
 }
 .above-header-widget .tm-widget p {
@@ -10451,12 +9687,29 @@ Header
   text-align: right;
   line-height: 1.8;
 }
-.header-right-widget .uk-icon-phone,
-.header-right-widget .uk-icon-map-marker {
-  margin-right: 8px;
-  font-size: 22px;
+.header-right-widget .uk-icon-calendar,
+.header-right-widget .uk-icon-map-marker,
+.header-right-widget .uk-icon-map {
+  margin-right: 10px;
+  font-size: 20px;
   position: relative;
   top: 1px;
+  color: #E96A23;
+}
+@media (max-width: 768px) {
+  .header-right-widget {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+.poo-opening-hours {
+  margin: 20px 0;
+}
+@media (max-width: 768px) {
+  .poo-opening-hours {
+    display: none;
+  }
 }
 /*--------------------------------------------------------------
 content
@@ -10512,6 +9765,12 @@ article > .tm-article-image:first-child {
   -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
+@media (max-width: 1024px) {
+  .poo-map {
+    width: 100%;
+    float: none;
+  }
+}
 /*--------------------------------------------------------------
 footer
 --------------------------------------------------------------*/
@@ -10537,20 +9796,5 @@ footer
   -moz-transform: rotateZ(360deg);
   -ms-transform: rotateZ(360deg);
   -o-transform: rotateZ(360deg);
-}
-.tm-footer .uk-icon-heart {
-  color: #E96A23;
-  margin-left: 3px;
-}
-.tm-footer-widgets {
-  background: #000;
-}
-.tm-footer-widgets .tm-widget {
-  background: #000;
-  color: #ededed;
-}
-.tm-footer-widgets .tm-widget .uk-panel-title {
-  text-transform: uppercase;
-  color: #E96A23;
 }
 /*# sourceMappingURL=style.css.map */
