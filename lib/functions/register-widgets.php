@@ -16,6 +16,12 @@ function poo_register_widget_areas() {
 			'beans_type'  => 'grid',
 			'description' => __( 'This is the widget area for the right of the header.', CHILD_TEXT_DOMAIN )
 		),
+		array(
+			'name'        => __( 'Above Header', CHILD_TEXT_DOMAIN ),
+			'id'          => 'above-header-widget',
+			'beans_type'  => 'grid',
+			'description' => __( 'This is the widget area for above the header.', CHILD_TEXT_DOMAIN )
+		),
 	);
 
 	foreach ( $widgets_areas as $widget_area ) {

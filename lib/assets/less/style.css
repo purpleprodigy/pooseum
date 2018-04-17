@@ -9628,7 +9628,7 @@ Header
 }
 .poo-tagline {
   font-family: 'Francois One', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   color: #444 !important;
 }
 /*-----------------------------------------------------------
@@ -9710,6 +9710,14 @@ Header
   .poo-opening-hours {
     display: none;
   }
+}
+.above-header-widget {
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #E96A23;
+  text-align: center;
+  padding: 10px 0;
 }
 /*--------------------------------------------------------------
 content
