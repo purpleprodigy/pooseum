@@ -39,16 +39,11 @@ article > .tm-article-image:first-child {
   }
 }
 
-/*-----------------------------------------------------------
-	Comments
-/*------------------------------------------------------------*/
-.tm-comments{
-  @media (min-width: @breakpoint-medium){
-    padding: 40px;
-  }
+// Bullets
+.tm-article-content ul li {
+  margin: 0;
+  padding: 0 0 0 25px;
+  list-style-type: none;
+  background: url(../../images/icon-bullet.png) no-repeat 0 .3em;
 }
 
-.tm-comment-form-wrap{
-    padding: 30px;
-    .box-shadow(@global-medium-box-shadow);
-}

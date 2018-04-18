@@ -9750,19 +9750,11 @@ article > .tm-article-image:first-child {
     margin-right: -40px;
   }
 }
-/*-----------------------------------------------------------
-	Comments
-/*------------------------------------------------------------*/
-@media (min-width: 768px) {
-  .tm-comments {
-    padding: 40px;
-  }
-}
-.tm-comment-form-wrap {
-  padding: 30px;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+.tm-article-content ul li {
+  margin: 0;
+  padding: 0 0 0 25px;
+  list-style-type: none;
+  background: url(../../images/icon-bullet.png) no-repeat 0 0.3em;
 }
 @media (max-width: 1024px) {
   .poo-map {
