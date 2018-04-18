@@ -9635,15 +9635,14 @@ Header
 	Above Header Widget
 /*------------------------------------------------------------*/
 .above-header-widget {
-  display: none;
-  background: #000;
-  text-align: right;
-  padding: 20px 35px;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #E96A23;
+  text-align: center;
+  padding: 10px 0;
 }
 @media (min-width: 768px) {
-  .above-header-widget {
-    display: block;
-  }
 }
 .above-header-widget .tm-widget {
   color: #fff;
@@ -9710,14 +9709,6 @@ Header
   .poo-opening-hours {
     display: none;
   }
-}
-.above-header-widget {
-  font-size: 42px;
-  text-transform: uppercase;
-  color: #fff;
-  background-color: #E96A23;
-  text-align: center;
-  padding: 10px 0;
 }
 /*--------------------------------------------------------------
 content

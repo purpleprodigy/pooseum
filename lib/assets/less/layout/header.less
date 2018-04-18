@@ -51,13 +51,15 @@ Header
 /*------------------------------------------------------------*/
 
 .above-header-widget {
-  display: none;
   @media (min-width: @breakpoint-medium) {
-    display: block;
+    //display: block;
   }
-  background: @secondary-color;
-  text-align: right;
-  padding: 20px 35px;
+  font-size: @base-h1-font-size;
+  text-transform: uppercase;
+  color: @white;
+  background-color: @primary-color;
+  text-align: center;
+  padding: 10px 0;
 
   .tm-widget {
     color: @white;

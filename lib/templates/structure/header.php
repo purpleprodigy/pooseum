@@ -20,7 +20,6 @@ function poo_set_up_header_structure() {
 	beans_remove_action( 'beans_breadcrumb' );
 
 	beans_remove_attribute( 'beans_widget_panel_above-header-widget', 'class', 'uk-panel-box' );
-	beans_add_attribute( 'beans_widget_panel_above-header-widget', 'class', 'uk-hidden-small' );
 }
 
 /**
@@ -35,9 +34,7 @@ function poo_display_above_header_widget() {
 		return;
 	} ?>
     <div class="above-header-widget">
-        <div class="uk-container uk-container-center">
 			<?php echo beans_widget_area( 'above-header-widget' ); ?>
-        </div>
     </div>
 <?php }
 

@@ -43,7 +43,6 @@ function poo_enqueue_styles() {
 		CHILD_LIB . '/assets/less/layout/header.less',
 		CHILD_LIB . '/assets/less/layout/footer.less',
 		CHILD_LIB . '/assets/less/layout/pages.less',
-		CHILD_LIB . '/assets/less/layout/widgets.less',
 		CHILD_LIB . '/assets/less/utilities/mixins.less',
 
 	), 'less' );
