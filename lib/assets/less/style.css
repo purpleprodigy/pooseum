@@ -9750,11 +9750,10 @@ article > .tm-article-image:first-child {
     margin-right: -40px;
   }
 }
-.tm-article-content ul li {
-  margin: 0;
-  padding: 0 0 0 25px;
-  list-style-type: none;
-  background: url(../../images/icon-bullet.png) no-repeat 0 0.3em;
+@media (max-width: 875px) {
+  .cartoon {
+    float: none;
+  }
 }
 @media (max-width: 1024px) {
   .poo-map {
